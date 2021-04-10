@@ -1,0 +1,81 @@
+/*
+input[type="text], input[type="password"] 
+
+}
+*/
+body {
+    background-color: #2d2a2e;
+    color: #fcfcfa;
+    font-family: 'Raleway', sans-serif;
+}
+
+.title {
+    color: #ff6188;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4em;
+    margin: 120px 50px;
+    text-align: center;
+
+}
+
+.list__container {
+    display: flex;
+}
+
+.listbox {
+    width: 30%;
+    border-radius: 5px;
+    margin: 10px 20px;
+    padding: 0px 10px;
+}
+
+.listbox:hover {
+    border: 0.5px solid #fcfcfa79;
+
+}
+
+.list__name {
+    color: #a9dc76;
+    font-size: 1.2em;;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.list {
+    padding: 0px;
+}
+
+.list__element {
+    list-style: none;
+    border-radius: 5px;
+    background-color: #727067;
+    padding: 10px;
+    margin: 10px 0px;
+}
+
+.element__add {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.list__add {
+    color: #ffd866;
+    background-color: inherit;
+    border: 1px solid #fcfcfa;
+    border-radius: 5px;
+    list-style: none;
+    padding: 10px;
+    width: 90%;
+}
+
+.add__button {
+    padding:0px 9px;
+    font-size: 1.5em;
+    height: 35px;
+    color: #ff6188;
+    background-color: inherit;
+    border: 1px solid #fcfcfa;
+    margin-left: 5px;
+    border-radius: 100px;
+}
