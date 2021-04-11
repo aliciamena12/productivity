@@ -4,47 +4,34 @@
   require 'database.php';
 
   if (isset($_SESSION['user_id'])) {
-    $records = $conn->prepare('SELECT id, email, password FROM users WHERE id = :id');
-    $records->bindParam(':id', $_SESSION['user_id']);
-    $records->execute();
-    $results = $records->fetch(PDO::FETCH_ASSOC);
+        $records = $conn->prepare('SELECT id, email, password FROM users WHERE id = :id');
+        $records->bindParam(':id', $_SESSION['user_id']);
+        $records->execute();
+        $results = $records->fetch(PDO::FETCH_ASSOC);
 
-    $user = null;
+        $user = null;
 
-    if (count($results) > 0) {
-        $user = $results;
+        if (count($results) > 0) {
+            $user = $results;
+        }
     }
-  }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
-    <meta name="description" content="Practice of Drag and Drop">
-    <link rel="stylesheet" href="styles.css">
-    <!-- <link rel="icon" href="images\logo.png" type="image/png" sizes="16x16"> -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap" rel="stylesheet">
-   
-</head>
-<body>
-
-    <?php require 'partials/header.html' ?>
-
+<?php include("includes/header.html") ?>
 
     <?php if(!empty($user)): ?>
-        <br> Welcome. <?= $user['email']; ?>
-        <br>You are successfully Logged In.
-        <a href="logout.php">Logout</a>
+        <?= header('Location: /dashboard.php'); ?>
+
     <?php else: ?>
-        <h1>Home</h1>
-        <h2>Please Login or SignUp</h2>
-        <a href="login.php">Login</a> or
-        <a href="signup.php">SignUp</a>
+        <main>
+            <h1 class="title">Home</h1>
+            <p class="page__description">Ready to be productive? <br>
+                Start now to be organized <br>
+                and you won't regret it.</p>
+            <h2>Please <a class="links" href="login.php">Login</a> or <a class="links" href="signup.php">SignUp</a></h2>
+        </main>    
+        <?php include("includes/footer.html") ?>    
+
     <?php endif; ?>
-</body>
-</html>
+
+
