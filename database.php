@@ -12,3 +12,18 @@
     }
 
 
+/*
+$conn = mysqli_connect(
+    'localhost',
+    'root',
+    '',
+    'productivity'
+);
+
+if (isset($conn)) {
+    echo 'DB is connected';
+
+}
+
+*/
+
