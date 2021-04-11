@@ -1,13 +1,53 @@
-/*
-input[type="text], input[type="password"] 
 
-}
-*/
 body {
     background-color: #2d2a2e;
     color: #fcfcfa;
     font-family: 'Raleway', sans-serif;
+    justify-content: center;
+    text-align: center;
 }
+
+
+/***********************************
+ _    _                _           
+| |  | |              | |          
+| |__| | ___  __ _  __| | ___ _ __ 
+|  __  |/ _ \/ _` |/ _` |/ _ \ '__|
+| |  | |  __/ (_| | (_| |  __/ |   
+|_|  |_|\___|\__,_|\__,_|\___|_|   
+                                   
+************************************/                                   
+
+    header {
+        border-bottom: 2px solid #eee;
+        font-size: 1.2em;
+        padding: 20px 0;
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    header a {
+        text-decoration: none;
+        color:#78dce8;
+        font-weight: 900;
+    }
+
+    header a:hover {
+        color: #9f9df2;
+    }
+
+
+
+/****************************
+  _____           _           
+ |_   _|         | |          
+   | |  _ __   __| | _____  __
+   | | | '_ \ / _` |/ _ \ \/ /
+  _| |_| | | | (_| |  __/>  < 
+ |_____|_| |_|\__,_|\___/_/\_\
+
+*******************************/
 
 .title {
     color: #ff6188;
@@ -18,64 +58,138 @@ body {
 
 }
 
-.list__container {
-    display: flex;
-}
-
-.listbox {
-    width: 30%;
-    border-radius: 5px;
-    margin: 10px 20px;
-    padding: 0px 10px;
-}
-
-.listbox:hover {
-    border: 0.5px solid #fcfcfa79;
-
-}
-
-.list__name {
-    color: #a9dc76;
-    font-size: 1.2em;;
-    font-weight: bolder;
-    text-align: center;
-}
-
-.list {
-    padding: 0px;
-}
-
-.list__element {
-    list-style: none;
-    border-radius: 5px;
-    background-color: #727067;
-    padding: 10px;
-    margin: 10px 0px;
-}
-
-.element__add {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.list__add {
-    color: #ffd866;
-    background-color: inherit;
-    border: 1px solid #fcfcfa;
-    border-radius: 5px;
-    list-style: none;
-    padding: 10px;
-    width: 90%;
-}
-
-.add__button {
-    padding:0px 9px;
+.page__description {
     font-size: 1.5em;
-    height: 35px;
-    color: #ff6188;
+    line-height: 40px;
+}
+
+.links {
+    text-decoration: none;
+    color: #ffd866;
+}
+
+
+
+/************************
+               _   _     
+    /\        | | | |    
+   /  \  _   _| |_| |__  
+  / /\ \| | | | __| '_ \ 
+ / ____ \ |_| | |_| | | |
+/_/    \_\__,_|\__|_| |_|
+
+*************************/
+
+
+.auth__container {
+    color: #fc9867;
     background-color: inherit;
     border: 1px solid #fcfcfa;
-    margin-left: 5px;
-    border-radius: 100px;
+    border-radius: 5px;
+    list-style: none;
+    padding: 10px;
+    width: 60%;
+    margin: 0px auto;
 }
+
+.form__input {
+    color: #a9dc76;
+    background-color: inherit;
+    border: 1px solid #fcfcfa;
+    border-radius: 5px;
+    list-style: none;
+    padding: 10px;
+    margin: 5px;
+    width: 80%;
+}
+
+.form__button {
+    margin: 20px;
+    padding:0px 9px;
+    font-size: 1.2em;
+    height: 35px;
+    color: #a9dc76;
+    background-color: inherit;
+    border: 1px solid #fcfcfa;
+    border-radius: 5px;
+}
+
+
+
+/*************************************************
+ _____            _     _                         _ 
+|  __ \          | |   | |                       | |
+| |  | | __ _ ___| |__ | |__   ___   __ _ _ __ __| |
+| |  | |/ _` / __| '_ \| '_ \ / _ \ / _` | '__/ _` |
+| |__| | (_| \__ \ | | | |_) | (_) | (_| | | | (_| |
+|_____/ \__,_|___/_| |_|_.__/ \___/ \__,_|_|  \__,_|
+                                                    
+**************************************************/
+
+    .list__container {
+        display: flex;
+    }
+
+    .listbox {
+        width: 30%;
+        border-radius: 5px;
+        margin: 10px 20px;
+        padding: 0px 10px;
+    }
+
+    .listbox:hover {
+        border: 0.5px solid #fcfcfa79;
+
+    }
+
+    .list__name {
+        color: #a9dc76;
+        font-size: 1.2em;;
+        font-weight: bolder;
+        text-align: center;
+    }
+
+    .list {
+        padding: 0px;
+    }
+
+    .list__element {
+        list-style: none;
+        border-radius: 5px;
+        background-color: #727067;
+        padding: 10px;
+        margin: 10px 0px;
+    }
+
+    .element__add {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .task__add {
+        color: #ffd866;
+        background-color: inherit;
+        border: 1px solid #fcfcfa;
+        border-radius: 5px;
+        list-style: none;
+        padding: 10px;
+        width: 90%;
+    }
+
+    .add__button {
+        padding:0px 9px;
+        font-size: 1.5em;
+        height: 35px;
+        color: #ff6188;
+        background-color: inherit;
+        border: 1px solid #fcfcfa;
+        margin-left: 5px;
+        border-radius: 100px;
+    }
+    
+
+    main {
+        height: 620px;
+    }
+
