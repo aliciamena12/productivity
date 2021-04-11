@@ -19,37 +19,28 @@
     }
 ?>
 
+<?php include("includes/header.html") ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <meta name="description" content="Practice of Drag and Drop">
-    <link rel="stylesheet" href="styles.css">
-    <!-- <link rel="icon" href="images\logo.png" type="image/png" sizes="16x16"> -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap" rel="stylesheet">
-   </head>
-<body>
+<main>
+    <h1 class="title">Productivity</h1>
 
-    <?php require 'partials/header.html' ?>
+    <section class="auth__container">
+        <h2 class="subtitle">Signup</h2>
 
-    <h1>SignUp</h1>
-    
-    <?php if(!empty($message)): ?>
-        <p><?= $message ?></p>
-    <?php endif; ?>
-    
-    <form action="signup.php" method="post">
-        <input type="text" name="email" placeholder="Enter your email" required><br>
-        <input type="password" name="password" placeholder="Enter your password" required><br>
-        <input type="password" name="Confirm password" placeholder="Confirm your password"><br>
+        <?php if(!empty($message)): ?>
+            <p><?= $message ?></p>
+        <?php endif; ?>
+        
+        <form action="signup.php" method="post">
+            <input class="form__input" type="text" name="email" placeholder="Enter your email" required><br>
+            <input class="form__input" type="password" name="password" placeholder="Enter your password" required><br>
+            <input class="form__input" type="password" name="Confirm password" placeholder="Confirm your password"><br>
 
-        <input type="submit" value="Send"><br>
-        <span>If you already have an account, <a href="login.php">Login</a></span>
-    </form>
-</body>
-</html>
+            <input class="form__button" type="submit" value="Send"><br>
+            <span>If you already have an account, <a class="links" href="login.php">Login</a></span>
+        </form>
+    </section>
+</main>
+
+<?php include("includes/footer.html") ?>
+
